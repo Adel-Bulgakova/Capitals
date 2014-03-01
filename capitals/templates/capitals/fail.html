@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://localhost:8000/capital/">
+
+<html>
+	<head>
+		<!-- <link rel="stylesheet" href="/static/capitals/first.css" type="text/css" /> -->
+		<style type="text/css">
+		#block {position:absolute; z-index:3;  top:50%; left:50%; margin-top:-225px; margin-left:-225px; text-align: center; background-color:white; border: 4px double #CEECF5; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; padding: 15px;}
+		</style>
+	</head>
+	<body>
+		<div id='block'>
+			<h1>Please try again</h1>
+			<h2>{{ capital.question }}</h2>
+			<form action="/capital/" method="POST" >{% csrf_token %}
+				<input type = 'hidden' name = 'pk' value = {{ capital.pk }}>
+				Type your answer: 
+				<input type='text' name='answer'>
+				<input type='submit' value='Reply'>
+			</form>
+		</div>
+	</body>
+</html>
+
