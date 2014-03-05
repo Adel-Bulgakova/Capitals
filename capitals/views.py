@@ -7,7 +7,7 @@ from random import randint
 
 def results(request):
 	if request.method == "GET":
-		capital = get_object_or_404(Capital, pk = randint(0,6))
+		capital = get_object_or_404(Capital, pk = randint(0,20))
 		return render(request, 'capitals/results.html', {'capital': capital})
 	else:
 		answer = request.POST["answer"]

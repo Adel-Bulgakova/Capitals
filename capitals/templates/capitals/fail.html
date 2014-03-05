@@ -3,21 +3,21 @@
 
 <html>
 	<head>
-		<!-- <link rel="stylesheet" href="/static/capitals/first.css" type="text/css" /> -->
 		<style type="text/css">
-		#block {position:absolute; z-index:3;  top:50%; left:50%; margin-top:-225px; margin-left:-225px; text-align: center; background-color:white; border: 4px double #CEECF5; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; padding: 15px;}
+		#block {position:absolute; z-index:3;  text-align: center; width:400px; height:200px; margin:auto;  top:0;  left:0;  bottom:0;  right:0; text-align: center; background-color:white; border: 4px double #CEECF5; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; font-family: 'Century Gothic'; word-wrap:break-word; font-size:30px; line-height:35px;}
 		</style>
 	</head>
 	<body>
 		<div id='block'>
-			<h1>Please try again</h1>
-			<h2>{{ capital.question }}</h2>
-			<form action="/capital/" method="POST" >{% csrf_token %}
+			<p>Пожалуйста, попробуйте еще раз</p>
+			<p>{{ capital.question }}</p>
+			<p>	<form action="/capital/" method="POST" >{% csrf_token %}
 				<input type = 'hidden' name = 'pk' value = {{ capital.pk }}>
-				Type your answer: 
+				Введите Ваш ответ: 
 				<input type='text' name='answer'>
-				<input type='submit' value='Reply'>
-			</form>
+				<input type='submit' value='Ответить'>
+				</form>
+			</p>
 		</div>
 	</body>
 </html>

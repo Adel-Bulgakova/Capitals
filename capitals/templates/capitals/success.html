@@ -7,7 +7,7 @@
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
       #map-canvas { height: 100% }
-      #block{position:absolute; text-align: center; vertical-align: middle; width:350px; height: 300px; margin-left: 50px; margin-top: 50px; z-index: 3; background-color: white; border: 4px double #CEECF5; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; opacity: 0; padding: 50px;} 
+      #block{position:absolute; text-align: center; width:400px; height: 400px; margin: auto;  top: 0;  left: 0;  bottom: 0;  right: 0; z-index: 3; background-color: white; border: 4px double #CEECF5; border-radius:6px; -webkit-border1radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; font-family: 'Century Gothic'; opacity: 0;} 
     </style>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&sensor=false"> </script>
     <script type="text/javascript" src="/static/capitals/jquery.js"> </script>
@@ -121,7 +121,7 @@
     function onShow(id) {
       var obj=$('#'+id); 
       if(obj.css('opacity')=='0') {
-        obj.css({zIndex:'3'}).animate({opacity:'1',left:'500px'},2000)
+        obj.css({zIndex:'3'}).animate({opacity:'1',left:'600px'},2000)
       } else {
         obj.animate({opacity:'0',left:'0px'},1000,function(){
           obj.css({zIndex:'-4'})

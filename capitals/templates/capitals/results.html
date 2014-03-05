@@ -11,7 +11,7 @@
       html { height:100% }
       body { height:100%; margin:0; padding:0 }
       #map-canvas {  height:100% }
-      #block {position:absolute; z-index:3; top:50%; vertical-align: middle; left:300px; margin-top:-100px; text-align: center; margin-left:-250px; background-color:white; border: 4px double #CEECF5; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; padding: 15px;}
+      #block {position:absolute; z-index:3; width:400px; height:150px; margin: auto;  top:0; bottom:0; left:0; right:0; text-align:center; background-color:white; border:4px double #CEECF5; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:5px; -khtml-border-radius:15px; font-family: 'Century Gothic'; font-size:30px; line-height:35px; padding: 15px;}
     </style>
     <script>
       var map;
@@ -87,8 +87,8 @@
 			{{ capital.question }}
 				<form action='/capital/' method='POST'>{% csrf_token %}
 					<input type = 'hidden' name = 'pk' value = {{ capital.pk }}>
-					Type your answer: <input type='text' name='answer'>
-					<input type='submit' value='Reply'>
+					Введите Ваш ответ: <input type='text' name='answer'>
+					 <input type='submit' value='Ответить'>
 				</form> 
 		</div>
     <div id='map-canvas'/> 
